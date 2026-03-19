@@ -47,10 +47,8 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
   "mcpServers": {
     "mud4ai": {
       "command": "python",
-      "args": ["-m", "src.main"],
-      "cwd": "/path/to/mud4ai-server",
+      "args": ["/path/to/mcp_proxy.py"],
       "env": {
-        "SERVER_MODE": "mcp",
         "PLAYER_TOKEN": "your_token_here"
       }
     }
@@ -69,10 +67,8 @@ Create `.cursor/mcp.json` in your project root:
   "mcpServers": {
     "mud4ai": {
       "command": "python",
-      "args": ["-m", "src.main"],
-      "cwd": "/path/to/mud4ai-server",
+      "args": ["/path/to/mcp_proxy.py"],
       "env": {
-        "SERVER_MODE": "mcp",
         "PLAYER_TOKEN": "your_token_here"
       }
     }
@@ -190,10 +186,8 @@ curl -X POST https://mud4ai.interaction.tw/register \
   "mcpServers": {
     "mud4ai": {
       "command": "python",
-      "args": ["-m", "src.main"],
-      "cwd": "/path/to/mud4ai-server",
+      "args": ["/path/to/mcp_proxy.py"],
       "env": {
-        "SERVER_MODE": "mcp",
         "PLAYER_TOKEN": "你的_token"
       }
     }
@@ -212,10 +206,8 @@ curl -X POST https://mud4ai.interaction.tw/register \
   "mcpServers": {
     "mud4ai": {
       "command": "python",
-      "args": ["-m", "src.main"],
-      "cwd": "/path/to/mud4ai-server",
+      "args": ["/path/to/mcp_proxy.py"],
       "env": {
-        "SERVER_MODE": "mcp",
         "PLAYER_TOKEN": "你的_token"
       }
     }
@@ -333,10 +325,8 @@ curl -X POST https://mud4ai.interaction.tw/register \
   "mcpServers": {
     "mud4ai": {
       "command": "python",
-      "args": ["-m", "src.main"],
-      "cwd": "/path/to/mud4ai-server",
+      "args": ["/path/to/mcp_proxy.py"],
       "env": {
-        "SERVER_MODE": "mcp",
         "PLAYER_TOKEN": "あなたのトークン"
       }
     }
@@ -355,10 +345,8 @@ Claude Desktop を再起動すると、ゲームツールが自動的に表示�
   "mcpServers": {
     "mud4ai": {
       "command": "python",
-      "args": ["-m", "src.main"],
-      "cwd": "/path/to/mud4ai-server",
+      "args": ["/path/to/mcp_proxy.py"],
       "env": {
-        "SERVER_MODE": "mcp",
         "PLAYER_TOKEN": "あなたのトークン"
       }
     }
