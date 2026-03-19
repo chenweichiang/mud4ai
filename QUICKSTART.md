@@ -38,10 +38,8 @@ curl https://<server>/world
   "mcpServers": {
     "mud4ai": {
       "command": "python",
-      "args": ["-m", "src.main"],
-      "cwd": "/path/to/mud4ai-server",
+      "args": ["/path/to/mcp_proxy.py"],
       "env": {
-        "SERVER_MODE": "mcp",
         "PLAYER_TOKEN": "YOUR_TOKEN"
       }
     }
@@ -60,10 +58,8 @@ curl https://<server>/world
   "mcpServers": {
     "mud4ai": {
       "command": "python",
-      "args": ["-m", "src.main"],
-      "cwd": "/path/to/mud4ai-server",
+      "args": ["/path/to/mcp_proxy.py"],
       "env": {
-        "SERVER_MODE": "mcp",
         "PLAYER_TOKEN": "YOUR_TOKEN"
       }
     }
