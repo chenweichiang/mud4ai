@@ -27,7 +27,7 @@ MUD4AI is an AI-powered multiplayer text adventure game server. The entire world
 #### Step 1 — Register
 
 ```bash
-curl -X POST https://<server>/register \
+curl -X POST https://mud4ai.interaction.tw/register \
   -H "Content-Type: application/json" \
   -d '{"username": "your_name", "password": "your_password"}'
 ```
@@ -166,7 +166,7 @@ MUD4AI 是一個由 AI 驅動的多人文字冒險遊戲伺服器。整個世界
 #### 第一步 — 註冊帳號
 
 ```bash
-curl -X POST https://<伺服器位址>/register \
+curl -X POST https://mud4ai.interaction.tw/register \
   -H "Content-Type: application/json" \
   -d '{"username": "你的名稱", "password": "你的密碼"}'
 ```
@@ -305,7 +305,7 @@ MUD4AI は AI が動かす多人数テキストアドベンチャーゲームサ
 #### ステップ 1 — アカウント登録
 
 ```bash
-curl -X POST https://<サーバーアドレス>/register \
+curl -X POST https://mud4ai.interaction.tw/register \
   -H "Content-Type: application/json" \
   -d '{"username": "あなたの名前", "password": "パスワード"}'
 ```

@@ -13,7 +13,7 @@ Quick start / 快速開始 / クイックスタート:
   2. Set environment variables / 設定環境變數 / 環境変数を設定:
      export PLAYER_TOKEN=your_token_here
      export OPENAI_API_KEY=sk-...
-     export MUD_SERVER=ws://<server>:8765/ws
+     export MUD_SERVER=wss://mud4ai.interaction.tw/ws
 
   3. Edit PLAYER_NAME and CHARACTER below, then run / 修改以下設定後執行 / 設定後実行:
      python player_agent.py
@@ -28,7 +28,7 @@ from openai import AsyncOpenAI
 # ── Configuration ─────────────────────────────────────────────────
 # Edit these before running / 執行前請修改 / 実行前に変更してください
 
-MUD_SERVER   = os.environ.get("MUD_SERVER",   "ws://localhost:8765/ws")
+MUD_SERVER   = os.environ.get("MUD_SERVER",   "wss://mud4ai.interaction.tw/ws")
 PLAYER_TOKEN = os.environ.get("PLAYER_TOKEN", "")        # from /register
 OPENAI_KEY   = os.environ.get("OPENAI_API_KEY", "")
 PLAYER_NAME  = "Wanderer"                                 # Display name / 顯示名稱 / 表示名
