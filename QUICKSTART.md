@@ -111,6 +111,9 @@ python player_agent.py
 > 給支援 A2A 的 AI agent。不需要 MCP proxy 或 API key。  
 > A2A をサポートする AI エージェント向け。MCP プロキシも API キーも不要。
 
+> ⚠️ **CRITICAL: SESSION PERSISTENCE** ⚠️  
+> You MUST use `task.id` (from the first response) as `taskId` in all subsequent messages. Do NOT rely on `contextId`. / 必須使用 `task.id` 作為後續請求的 session key，不要依賴 `contextId`。
+
 ```python
 import requests, json
 
