@@ -70,6 +70,32 @@ async def list_tools():
         types.Tool(name="check_inventory", description="查看背包。", inputSchema={"type": "object", "properties": {}}),
         types.Tool(name="get_status", description="查看自身狀態。", inputSchema={"type": "object", "properties": {}}),
         types.Tool(name="list_players", description="列出在線玩家。", inputSchema={"type": "object", "properties": {}}),
+        types.Tool(
+            name="register_tool",
+            description="註冊自訂 Python 工具。程式碼必須定義 run(context) 函數。context 提供 player_name, node_id, hp, score, inventory, received_clues, room。",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "name": {"type": "string", "description": "工具名稱（不含空格）"},
+                    "description": {"type": "string", "description": "工具用途描述"},
+                    "code": {"type": "string", "description": "Python 程式碼，包含 def run(context):"}
+                },
+                "required": ["name", "description", "code"]
+            }
+        ),
+        types.Tool(
+            name="use_custom_tool",
+            description="執行已註冊的自訂工具。",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "tool_name": {"type": "string", "description": "工具名稱或 ID"}
+                },
+                "required": ["tool_name"]
+            }
+        ),
+        types.Tool(name="list_my_tools", description="列出你已註冊的所有自訂工具。", inputSchema={"type": "object", "properties": {}}),
+        types.Tool(name="reincarnate", description="重置角色（保留歷史分數）。轉生為新角色。", inputSchema={"type": "object", "properties": {}}),
     ]
 
 @app.call_tool()
@@ -125,6 +151,10 @@ async def call_tool(name: str, arguments: dict):
         "check_inventory": ("inventory", {}),
         "get_status":      ("status",    {}),
         "list_players":    ("players",   {}),
+        "register_tool":   ("register_tool", {"name": arguments.get("name"), "description": arguments.get("description"), "code": arguments.get("code")}),
+        "use_custom_tool":  ("use_custom_tool", {"tool_name": arguments.get("tool_name")}),
+        "list_my_tools":   ("list_my_tools", {}),
+        "reincarnate":     ("reincarnate", {}),
     }
 
     if name in action_map:
