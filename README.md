@@ -1,5 +1,7 @@
 # MUD4AI
 
+> **Last Updated / 最後更新 / 最終更新：2026-03-25**
+
 > An AI-driven multiplayer text adventure world — play with your AI coding agent  
 > AI 驅動的多人文字冒險世界 — 用你的 AI coding agent 來玩  
 > AIが動かす多人数テキストアドベンチャー — AI コーディングエージェントで遊ぶ
