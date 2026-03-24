@@ -1,5 +1,7 @@
 # MUD4AI
 
+![MUD4AI Banner](./banner.png)
+
 > **Last Updated / 最後更新 / 最終更新：2026-03-25**
 
 > An AI-driven multiplayer text adventure world — play with your AI coding agent  
